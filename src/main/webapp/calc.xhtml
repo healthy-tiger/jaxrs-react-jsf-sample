@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:jsf="http://xmlns.jcp.org/jsf"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <h:body>
+        <ui:composition template="./template.xhtml">
+            <ui:define name="header">
+                <div class="content">
+                    <span>
+                        name: <h:outputText value="${loginBean.userName}"/>
+                    </span>
+                    <span>
+                        last login: <h:outputText value="${loginBean.loginTime}"/>
+                    </span>
+                    <h:form>
+                        <h:commandButton action="#{loginBean.logout}"
+                                         value="logout" />
+                    </h:form>
+                </div>
+            </ui:define>
+            <ui:define name="main">
+                <h:outputStylesheet library="css" name="calc.css" />
+                <div class="content">
+                    <div id="app"
+                         data-a="${loginBean.a}"
+                         data-b="${loginBean.b}"
+                         data-sessionid="#{loginBean.sessionId}"/>
+                    <script src="resources/script/App.js"></script>
+                </div>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>

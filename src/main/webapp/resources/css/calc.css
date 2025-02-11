@@ -1,0 +1,23 @@
+.header-content > .content {
+    text-align:right;
+}
+
+.header-content > .content > span {
+    margin: 0px 0.5em;
+}
+
+.header-content > .content > form {
+    display: inline-block;
+}
+
+main > .content {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+

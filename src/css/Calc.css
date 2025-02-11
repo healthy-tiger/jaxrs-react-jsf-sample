@@ -1,0 +1,17 @@
+form.question {
+    font-size: 20pt;
+}
+
+form.question input {
+    font-size: 20pt;
+}
+
+form.question input[type="number"] {
+    width: 5em;
+}
+
+form > .control-bar {
+    margin: 3pt 0px;
+    text-align: center;
+    font-size: 20pt;
+}
