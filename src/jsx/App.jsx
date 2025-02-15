@@ -1,3 +1,4 @@
+import '../css/common.css';
 import { createRoot } from 'react-dom/client';
 import Calc from './Calc.jsx';
 

@@ -9,28 +9,23 @@
     <h:body>
         <ui:composition template="./template.xhtml">
             <ui:define name="header">
-                <div class="content">
-                    <span>
-                        name: <h:outputText value="${loginBean.userName}"/>
-                    </span>
-                    <span>
-                        last login: <h:outputText value="${loginBean.loginTime}"/>
-                    </span>
-                    <h:form>
-                        <h:commandButton action="#{loginBean.logout}"
-                                         value="logout" />
-                    </h:form>
+                <div>
+                    name: <h:outputText value="${loginBean.userName}"/>
                 </div>
+                <div>
+                    last login: <h:outputText value="${loginBean.loginTime}"/>
+                </div>
+                <h:form>
+                    <h:commandButton action="#{loginBean.logout}"
+                                     value="logout" />
+                </h:form>
             </ui:define>
             <ui:define name="main">
-                <h:outputStylesheet library="css" name="calc.css" />
-                <div class="content">
-                    <div id="app"
-                         data-a="${loginBean.a}"
-                         data-b="${loginBean.b}"
-                         data-sessionid="#{loginBean.sessionId}"/>
-                    <script src="resources/script/App.js"></script>
-                </div>
+                <div id="app"
+                     data-a="${loginBean.a}"
+                     data-b="${loginBean.b}"
+                     data-sessionid="#{loginBean.sessionId}"/>
+                <script src="resources/script/App.js" type="module"></script>
             </ui:define>
         </ui:composition>
     </h:body>

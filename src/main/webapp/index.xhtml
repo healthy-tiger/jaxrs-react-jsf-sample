@@ -10,22 +10,19 @@
     <h:body>
         <ui:composition template="./template.xhtml">
             <ui:define name="main">
-                <h:outputStylesheet library="css" name="login.css"/>
-                <div class="login-content">
-                    <h:form>
-                        <div>
-                            <h:inputText id="username"
-                                         value="#{loginBean.userName}"
-                                         required="true"
-                                         requiredMessage="Please enter your name."
-                                         p:placeholder="name" />
-                        </div>
-                        <div class="control-bar">
-                            <h:commandButton value="login"
-                                             action="#{loginBean.login}" />
-                        </div>
-                    </h:form>
-                </div>
+                <h:form>
+                    <div>
+                        <h:inputText id="username"
+                                     value="#{loginBean.userName}"
+                                     required="true"
+                                     requiredMessage="Please enter your name."
+                                     p:placeholder="name" />
+                    </div>
+                    <div class="control-bar">
+                        <h:commandButton value="login"
+                                         action="#{loginBean.login}" />
+                    </div>
+                </h:form>
             </ui:define>
         </ui:composition>
     </h:body>
